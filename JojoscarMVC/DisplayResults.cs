@@ -14,6 +14,7 @@ namespace JojoscarMVC
             if (model.NbTimes <= 0)
                 model.NbTimes = 1;
             
+
             if (results == null)
             {
                 return false;
