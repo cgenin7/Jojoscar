@@ -1,0 +1,48 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.row
+ {
+    text-align:center;
+    font-size:25px;
+    font-family:'Brush MT';
+    vertical-align:top;
+    font-weight:bold;
+}
+
+.row.trophee {
+    text-align:center;
+    font-size:50px;
+    font-family:'Brush Script MT';
+    vertical-align:top;
+    color:darkred;
+    font-weight:bold;
+}
+
+container-fluid {
+    font-size:25px;
+    font-family:'Arial Rounded MT';
+    text-align:center;
+}

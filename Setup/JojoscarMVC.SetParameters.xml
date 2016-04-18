@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <setParameter name="IIS Web Application Name" value="Default Web Site/JojoscarMVC_deploy" />
+  <setParameter name="Jojoscar2003-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2003;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2004-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2004;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2005-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2005;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2006-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2006;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2007-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2007;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2008-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2008;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2009-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2009;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2010-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2010;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2011-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2011;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2012-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2012;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2013-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2013;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2014-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2014;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2015-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2015;Integrated Security=True;Connect Timeout=30" />
+  <setParameter name="Jojoscar2016-Web.config Connection String" value="Data Source=DESKTOP-E9OMQBE\SQLEXPRESS;Initial Catalog=Jojoscar2016;Integrated Security=True;Connect Timeout=30" />
+</parameters>

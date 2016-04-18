@@ -1,0 +1,88 @@
+﻿@model GuestModel
+
+@{
+    ViewBag.Title = "Effacer";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Supprimer cet invité de la liste</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccessCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccessCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PaymentDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PaymentDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Penality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Penality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsPresent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsPresent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsEligibleToMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsEligibleToMoney)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Effacer" class="btn btn-default" /> |
+            @Html.ActionLink("Liste des invités", "Index", new { year = ViewBag.Year })
+        </div>
+    }
+</div>

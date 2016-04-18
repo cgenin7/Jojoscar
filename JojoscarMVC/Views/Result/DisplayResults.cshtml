@@ -1,0 +1,79 @@
+﻿@model DisplayResultViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Résultats des JOJOSCAR</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/JojoscarBundle")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/resultPage")
+</head>
+
+<body style="background-image:url(../../Images/background.jpg)">
+
+    <div class="container-fluid">
+        <div class="row">
+            <aside class="col-md-3 text-right hidden-xs hidden-sm" >
+                <marquee style="text-align:center" direction="Up"  scrollamount="10" scrolldelay="5" height="100%">
+                    <p>
+                        <br/>
+                        <img border="0" src="~/Images/2016/Spotlight.png" alt="" hspace="0"> <!-- 2016 -->
+                        <br />
+                        <img border="0" src="~/Images/2016/BridgeOfSpices.png" alt="" hspace="0">
+                        <br/>
+                        <img border="0" src="~/Images/2016/Brooklyn.png" alt="" hspace="0">
+                        <br />
+                        <img border="0" src="~/Images/2016/MadMax.png" alt="" hspace="0">
+                        <br />
+                    </p>
+                </marquee>
+            </aside>
+            <section class="col-md-6 col-sm-12">
+                @Html.Partial("_displayResults", Model)
+            </section>
+            <aside class="col-md-3 text-left hidden-xs hidden-sm">
+                <marquee style="text-align:center" direction="up" scrollamount="10" scrolldelay="5"  height="100%">
+                    <p>
+                        <br />
+                        <img border="0" src="~/Images/2016/TheRevenant.png" alt="" hspace="0">
+                        <br />
+                        <img border="0" src="~/Images/2016/Room.png" alt="" hspace="0">
+                        <br />
+                        <img border="0" src="~/Images/2016/TheBigShort.png" alt="" hspace="0">
+                        <br />
+                        <img border="0" src="~/Images/2016/BringHimHome.png" alt="" hspace="0">
+                        <br />
+                    </p>
+                </marquee>
+            </aside>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 visible-xs visible-sm">
+                <marquee style="text-align:center" direction="Left" scrollamount="10" scrolldelay="5" width="100%">
+                    <p>
+                        <img border="0" src="~/Images/2016/Spotlight.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/BridgeOfSpices.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/Brooklyn.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/MadMax.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/TheRevenant.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/Room.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/TheBigShort.png" alt="" hspace="0">
+                        <img border="0" src="~/Images/2016/BringHimHome.png" alt="" hspace="0">
+                    </p>
+                </marquee>
+            </div>
+         </div>
+    </div>
+
+    
+</body>
+
+</html>

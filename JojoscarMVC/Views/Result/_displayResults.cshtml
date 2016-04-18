@@ -1,0 +1,116 @@
+﻿@model DisplayResultViewModel
+
+
+<div id="PartialResultsDiv">
+    @using (Ajax.BeginForm("DisplayPartialResults",
+                            new AjaxOptions
+                            {
+                                HttpMethod = "post",
+                                InsertionMode = InsertionMode.Replace,
+                                UpdateTargetId = "PartialResultsDiv"
+                            } ))
+    {
+        @Html.AntiForgeryToken();
+
+        @Html.HiddenFor(m => m.Year)
+        @Html.HiddenFor(m => m.NbTimes)
+
+        <div class="row trophee">
+            <div class="col-md-12">
+                <img src="~/Images/Jojoscar.png" height="150" />
+                <br />
+                @if (string.IsNullOrEmpty(Model.LabelTropheeJojoscar))
+                {
+                    <Label>Gagnants de la soirée des Jojoscar @ViewBag.Year </Label>
+                }
+                else
+                {
+                    <Label>@Html.DisplayWithBreaksFor(model => model.LabelTropheeJojoscar)</Label>
+                }
+            </div>
+        </div>
+        if (!string.IsNullOrEmpty(Model.LabelFirst))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <img src="~/Images/1.png" height="40" />
+                    <br />
+                    @Html.DisplayWithBreaksFor(model => model.LabelFirst)
+                </div>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(Model.LabelSecond))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <img src="~/Images/2.png" height="40" />
+                    <br />
+                    @Html.DisplayWithBreaksFor(model => model.LabelSecond)
+                </div>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(Model.LabelThird))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <img src="~/Images/3.png" height="40" />
+                    <br />
+                    @Html.DisplayWithBreaksFor(model => model.LabelThird)
+                </div>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(Model.LabelFourth))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <img src="~/Images/4.png" height="40" />
+                    <br />
+                    @Html.DisplayWithBreaksFor(model => model.LabelFourth)
+                </div>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(Model.LabelFifth))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <img src="~/Images/5.png" height="40" />
+                    <br />
+                    @Html.DisplayWithBreaksFor(model => model.LabelFifth)
+                </div>
+            </div>
+        }
+        if (!string.IsNullOrEmpty(Model.LabelCitron))
+        {
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                    <img src="~/Images/citron.png" height="40" />
+                    <br />
+                    @Html.DisplayWithBreaksFor(model => model.LabelCitron)
+                </div>
+            </div>
+        }
+        if (Model.Results != null)
+        {
+            <br/><br/>
+            <div class="row">
+                <div class="col-md-12">
+                    @Html.Partial("_Results", Model.Results)
+                </div>
+            </div>
+        }
+
+        <br /><br />
+        <input type="submit" id="GetNextResultId" value=">" style="font-size:5px;font-weight:normal" />
+        <br /><br />
+    }
+</div>
+
+
+
+

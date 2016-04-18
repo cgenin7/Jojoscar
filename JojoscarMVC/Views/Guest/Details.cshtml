@@ -1,0 +1,91 @@
+﻿@model GuestViewModel
+
+@{
+    ViewBag.Title = "Détails";
+}
+
+<h2>Détails</h2>
+
+<div>
+    <h4>Information sur l'invité sélectionné</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.AccessCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.AccessCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.PaymentDone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.PaymentDone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.Penality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.Penality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.IsPresent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.IsPresent)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Guest.IsEligibleToMoney)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Guest.IsEligibleToMoney)
+        </dd>
+    </dl>
+</div>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.DisplayFor(g => g.Categories)
+    </div>
+
+    <Label> Nombre de points: @Model.TotalNbPoints</Label>
+    <Label> Nombre de bonnes réponses: @Model.TotalNbResponses</Label>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Modifier", new { year = ViewBag.Year, id = Model.Guest.GuestID }) |
+    @Html.ActionLink("Liste des invités", "Index", new { year = ViewBag.Year })
+</p>

@@ -1,0 +1,17 @@
+﻿@model GuestViewModel
+
+@{
+    ViewBag.Title = "Choix des Jojoscar";
+}
+
+<h2>Choix des Jojoscar</h2>
+
+<div class="form-horizontal">
+    <div class="form-group">
+        @Html.DisplayFor(g => g.Categories)
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Liste des invités", "Index", new { year = ViewBag.Year })
+</p>

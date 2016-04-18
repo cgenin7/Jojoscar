@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>@ViewBag.Title - JOJOSCAR</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/JojoscarBundle")
+    @Scripts.Render("~/bundles/bootstrap")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Participants", "Index", "Guest", new { year = ViewBag.Year }, null)</li>
+                    <li>@Html.ActionLink("Choix des Jojoscar", "JojoscarChoice", "Result", new { year = ViewBag.Year }, null)</li>
+                    <li>@Html.ActionLink("Statistiques", "Statistics", "Result", new { year = ViewBag.Year }, null)</li>
+                    <li>@Html.ActionLink("Votes de l'académie", "AcademyVotes", "Result", new { year = ViewBag.Year }, null)</li>
+                    <li>@Html.ActionLink("Afficher les résultats", "DisplayResults", "Result", new { year = ViewBag.Year }, null)</li>
+                    <li>@Html.ActionLink("Tableau des résultats", "Results", "Result", new { year = ViewBag.Year }, null)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Jojoscar Inc.</p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

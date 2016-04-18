@@ -1,0 +1,28 @@
+﻿@model IEnumerable<CategoryViewModel>
+
+@{
+    ViewBag.Title = "Statistiques";
+}
+
+<h2>Statistiques</h2>
+
+@foreach (var categoryView in Model)
+{
+    <p>
+        <label> @categoryView.Category.CategoryName</label>
+    </p>
+    
+    <p style="margin-left:50px">
+        @for (int i = 0; i < categoryView.Category.CategoryNominees.Count; i++)
+        {
+            <label>
+                <span style="color:@(categoryView.MaxVotes == categoryView.NbVotesForEachNominee[i] ? "green" : "black")">
+                        @categoryView.Category.CategoryNominees[i].Description
+                        &nbsp;-&nbsp; @categoryView.NbVotesForEachNominee[i] votes.
+                </span>
+            </label>
+            <br />
+        }
+    </p>
+}
+

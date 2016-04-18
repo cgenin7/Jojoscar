@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ResultModel>
+
+<table class="table">
+    <tr style="font-size:20px;font-family:'Arial';font-weight:bold">
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbResponses)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NbPointsWithPenality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Remboursement)
+        </th>
+        <th></th>
+    </tr>
+    <tr><td height="50px"></td></tr>
+
+    @foreach (var item in Model)
+    {
+        <tr style="font-size:20px;font-family:'Arial'">
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.NbResponses)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.NbPointsWithPenality)
+            </td>
+            <td style="text-align:center">
+                @Html.DisplayFor(modelItem => item.RemboursementStr)
+            </td>
+        </tr>
+    }
+
+</table>
+

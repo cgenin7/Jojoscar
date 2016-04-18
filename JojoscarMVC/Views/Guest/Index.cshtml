@@ -1,0 +1,141 @@
+﻿@model IEnumerable<GuestModel>
+
+@{
+    ViewBag.Title = "Invités";
+}
+
+<h2>Liste des invités au gala des Jojoscar @ViewBag.Year</h2>
+
+@if (ViewBag.Year != 2016)
+{ 
+    @Html.ActionLink("2016", "Index", new { year = 2016 }) @:&nbsp;
+    
+}
+@if (ViewBag.Year != 2015)
+{
+    @Html.ActionLink("2015", "Index", new { year = 2015 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2014)
+{ 
+    @Html.ActionLink("2014", "Index", new { year = 2014 }) @:&nbsp;
+    
+}
+@if (ViewBag.Year != 2013)
+{ 
+    @Html.ActionLink("2013", "Index", new { year = 2013 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2012)
+{ 
+    @Html.ActionLink("2012", "Index", new { year = 2012 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2011)
+{ 
+    @Html.ActionLink("2011", "Index", new { year = 2011 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2010)
+{ 
+    @Html.ActionLink("2010", "Index", new { year = 2010 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2009)
+{ 
+    @Html.ActionLink("2009", "Index", new { year = 2009 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2008)
+{ 
+    @Html.ActionLink("2008", "Index", new { year = 2008 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2007)
+{
+    @Html.ActionLink("2007", "Index", new { year = 2007 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2006)
+{ 
+    @Html.ActionLink("2006", "Index", new { year = 2006 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2005)
+{ 
+    @Html.ActionLink("2005", "Index", new { year = 2005 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2004)
+{ 
+    @Html.ActionLink("2004", "Index", new { year = 2004 }) @:&nbsp;
+}
+@if (ViewBag.Year != 2003)
+{ 
+    @Html.ActionLink("2003", "Index", new { year = 2003 }) @:&nbsp;
+}
+<br/>
+
+<p>
+    @Html.ActionLink("Ajouter un nouvel invité", "Create", new { year = ViewBag.Year })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AccessCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PaymentDone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Penality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsPresent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsEligibleToMoney)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AccessCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PaymentDone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Penality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsPresent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsEligibleToMoney)
+        </td>
+        <td>
+            @Html.ActionLink("Modifier", "Edit", new { year = ViewBag.Year, id=item.GuestID }) |
+            @Html.ActionLink("Détails", "Details", new { year = ViewBag.Year, id = item.GuestID }) |
+            @Html.ActionLink("Effacer", "Delete", new { year = ViewBag.Year, id = item.GuestID })
+        </td>
+    </tr>
+}
+
+</table>
+
+<br />@Model.Count() participants
+<br/><br />
+@Html.ActionLink("Générer le fichier de votes", "GenerateVoteFile", new { year = ViewBag.Year })
+
+

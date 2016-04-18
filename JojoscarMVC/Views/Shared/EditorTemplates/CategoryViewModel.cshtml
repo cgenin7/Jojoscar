@@ -1,0 +1,17 @@
+﻿@model CategoryViewModel
+
+<div class="form-group">
+    <label class="control-label col-md-2"> @Model.Category.CategoryName (@Model.Category.NbPoints pts.)</label>
+</div>
+
+@Html.HiddenFor(model => model.Category.CategoryID)
+@Html.HiddenFor(model => model.Category.CategoryNb)
+
+<div style="margin-left: 100px">
+    @Html.DropDownListFor(m => m.SelectedLetter,
+            new SelectList(Model.Category.CategoryNominees,
+                            "Letter", "Description",
+                            Model.SelectedLetter))
+    <br />
+</div>
+

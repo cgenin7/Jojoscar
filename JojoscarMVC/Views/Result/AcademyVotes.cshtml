@@ -1,0 +1,67 @@
+﻿@model AcademyChoiceViewModel
+
+@{
+    ViewBag.Title = "Votes de l'académie";
+}
+
+<h2>Votes de l'académie</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        <Label>Votes (ex: A,B,C,....) &nbsp;&nbsp;&nbsp;</Label>
+        @Html.EditorFor(model => model.AcademyVotes, new { style = "width:700px;" })
+        @Html.ValidationMessageFor(model => model.AcademyVotes, "", new { @class = "text-danger" })
+    </div>
+
+    <input type="submit" value="Sauvegarder" name="AddStringVotes" class="btn btn-default"/>
+}
+
+<br/>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @for (int c = 0; c < Model.Categories.Count; c++)
+        {
+            @Html.HiddenFor(model => model.Categories[c].Category.CategoryID)
+            @Html.HiddenFor(model => model.Categories[c].Category.CategoryNb)
+
+            <br />
+            <label> @Model.Categories[c].Category.CategoryName (@Model.Categories[c].Category.NbPoints pts.)</label>
+            <br />
+
+            <div style="margin-left: 100px">
+                @Html.DropDownListFor(m => m.Categories[c].Category.AcademyChoiceLetter, Model.Categories[c].CategoryNomineesSelectList)
+                <br />
+
+            </div>
+        }
+
+    </div>
+    <input type="submit" value="Sauvegarder" class="btn btn-default"  onclick="@(Model.AcademyVotes = "")" />
+
+}
+
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div>
+        @Html.Label("Contenu php contenant les catégories")
+        <div>
+            @Html.TextAreaFor(model => model.Php, new { style = "width:700px;" })
+            @Html.ValidationMessageFor(model => model.Php, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <input type="submit" value="Sauvegarder" class="btn btn-default" />
+}
+
